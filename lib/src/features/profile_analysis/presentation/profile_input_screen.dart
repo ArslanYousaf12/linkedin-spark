@@ -96,6 +96,7 @@ class _ProfileInputScreenState extends State<ProfileInputScreen> {
 
               // For demo purposes, generate recommendations immediately
               context.read<ProfileBloc>().add(const RecommendationsRequested());
+              context.go(AppConstants.routeDashboard);
             }
           }
         },

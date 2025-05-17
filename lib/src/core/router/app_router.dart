@@ -5,6 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../features/onboarding/presentation/welcome_screen.dart';
 import '../../features/onboarding/presentation/permissions_screen.dart';
 import '../../features/profile_analysis/presentation/profile_input_screen.dart';
+import '../../features/profile_analysis/presentation/dashboard_screen.dart';
+import '../../features/profile_analysis/presentation/headline_analysis_screen.dart';
 import '../constants/app_constants.dart';
 
 class AppRouter {
@@ -36,6 +38,20 @@ class AppRouter {
         path: AppConstants.routeProfileInput,
         name: 'profileInput',
         builder: (context, state) => const ProfileInputScreen(),
+      ),
+
+      // Dashboard screen
+      GoRoute(
+        path: AppConstants.routeDashboard,
+        name: 'dashboard',
+        builder: (context, state) => const DashboardScreen(),
+      ),
+
+      // Headline analysis screen
+      GoRoute(
+        path: AppConstants.routeAnalysis,
+        name: 'analysis',
+        builder: (context, state) => const HeadlineAnalysisScreen(),
       ),
     ],
 
